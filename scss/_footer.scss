@@ -1,0 +1,20 @@
+html {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    margin-bottom: $footer-margin-top;
+}
+
+.footer {
+    width: 100%;
+    padding: $footer-padding-top $footer-padding-side $footer-padding-bottom;
+    margin-top: auto;
+}

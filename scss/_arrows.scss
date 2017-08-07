@@ -1,0 +1,37 @@
+@mixin css-arrow($direction, $width, $height, $color) {
+    width: 0;
+    height: 0;
+    @if $direction == "up" {
+        border-left: ($height / 2) solid transparent;
+        border-right: ($height / 2) solid transparent;
+        border-bottom: $width solid $color;
+    }
+    @if $direction == "down" {
+        border-left: ($height / 2) solid transparent;
+        border-right: ($height / 2) solid transparent;
+        border-top: $width solid $color;
+    }
+    @if $direction == "right" {
+        border-top: ($height / 2) solid transparent;
+        border-bottom: ($height / 2) solid transparent;
+        border-left: $width solid $color;
+    }
+    @if $direction == "left" {
+        border-top: ($height / 2) solid transparent;
+        border-bottom: ($height / 2) solid transparent;
+        border-right: $width solid $color;
+    }
+}
+
+$dirs: "up", "down", "left", "right";
+@each $direction in $dirs {
+    @each $width in $arrow-widths {
+        @each $height in $arrow-heights {
+            @each $colorname, $color in $arrow-colors {
+                .arrow-#{$direction}-#{$width / 1px}-#{$height / 1px}.arrow-#{$colorname} {
+                    @include css-arrow($direction, $width, $height, $color);
+                }
+            }
+        }
+    }
+}

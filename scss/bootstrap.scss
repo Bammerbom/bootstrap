@@ -4,8 +4,10 @@
  * Copyright 2011-2017 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+// Core variables and mixins
 
 @import "functions";
+@import "custom";
 @import "variables";
 @import "mixins";
 @import "print";
@@ -17,6 +19,8 @@
 @import "tables";
 @import "forms";
 @import "buttons";
+
+//Components
 @import "transitions";
 @import "dropdown";
 @import "button-group";
@@ -34,8 +38,16 @@
 @import "media";
 @import "list-group";
 @import "close";
+//@import "arrows";
+@import "footer";
+
+//Components w/ javascript
 @import "modal";
 @import "tooltip";
 @import "popover";
 @import "carousel";
+//@import "popups";
+@import "tageditor";
+
+//Utility
 @import "utilities";

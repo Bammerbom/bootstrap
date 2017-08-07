@@ -835,3 +835,16 @@ $kbd-bg:                      $gray-900 !default;
 
 $pre-color:                   $gray-900 !default;
 $pre-scrollable-max-height:   340px !default;
+
+// Footer
+
+$footer-margin-top: 20px !default;
+$footer-padding-side: 0px !default;
+$footer-padding-top: 7px !default;
+$footer-padding-bottom: 7px !default;
+
+// Arrows
+
+$arrow-widths: 5px, 10px, 20px, 30px, 40px !default;
+$arrow-heights: 5px, 10px, 20px, 30px, 40px !default;
+$arrow-colors: $theme-colors !default;
