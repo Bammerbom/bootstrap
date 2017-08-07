@@ -7,23 +7,23 @@
  */
 
 module.exports = function (grunt) {
-  'use strict'
+    'use strict'
 
-  // Project configuration.
-  grunt.initConfig({
-    'saucelabs-qunit': {
-      all: {
-        options: {
-          build: process.env.TRAVIS_JOB_ID,
-          concurrency: 10,
-          maxRetries: 3,
-          maxPollRetries: 4,
-          urls: ['http://localhost:3000/js/tests/index.html?hidepassed'],
-          browsers: grunt.file.readYAML('build/sauce_browsers.yml')
+    // Project configuration.
+    grunt.initConfig({
+        'saucelabs-qunit': {
+            all: {
+                options: {
+                    build: process.env.TRAVIS_JOB_ID,
+                    concurrency: 10,
+                    maxRetries: 3,
+                    maxPollRetries: 4,
+                    urls: ['http://localhost:3000/js/tests/index.html?hidepassed'],
+                    browsers: grunt.file.readYAML('build/sauce_browsers.yml')
+                }
+            }
         }
-      }
-    }
-  })
+    })
 
-  grunt.loadNpmTasks('grunt-saucelabs')
+    grunt.loadNpmTasks('grunt-saucelabs')
 }
