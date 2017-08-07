@@ -51,13 +51,13 @@
     }
 }
 
-// Navbar nav
+// Navbar nav & group
 //
 // Custom navbar navigation (doesn't require `.nav`, but does make use of `.nav-link`).
 
-.navbar-nav {
-    display: flex;
+.navbar-nav, .navbar-group {
     flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
+    justify-content: space-between;
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
@@ -71,6 +71,10 @@
         position: static;
         float: none;
     }
+}
+
+.navbar-group {
+    display: flex;
 }
 
 // Navbar text
@@ -145,7 +149,7 @@
                 flex-wrap: nowrap;
                 justify-content: flex-start;
 
-                .navbar-nav {
+                .navbar-nav, .navbar-group {
                     flex-direction: row;
 
                     .dropdown-menu {
@@ -197,7 +201,7 @@
         }
     }
 
-    .navbar-nav {
+    .navbar-nav, .navbar-group {
         .nav-link {
             color: $navbar-light-color;
 
@@ -242,7 +246,7 @@
         }
     }
 
-    .navbar-nav {
+    .navbar-nav, .navbar-group {
         .nav-link {
             color: $navbar-dark-color;
 
